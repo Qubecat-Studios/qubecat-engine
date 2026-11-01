@@ -1,4 +1,4 @@
-use crate::{input::Input, math::camera::Camera, time::Time, voxels::voxel_world::VoxelWorld};
+use crate::{camera::Camera, input::Input, time::Time, voxels::voxel_world::VoxelWorld};
 
 /// Ресурсы: всё игровое состояние вне мира сущностей.
 pub struct Resources {

@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 
 use engine::Mat4;
-use engine::mesher::MeshData;
 use engine::voxels::chunk::ChunkPos;
+use engine::voxels::mesher::MeshData;
 use engine::voxels::voxel_world::VoxelWorld;
 
 use crate::render::mesh::{BLOCK_COLORS, GpuMesh};

@@ -1,5 +1,5 @@
 use bytemuck::cast_slice;
-use engine::mesher::MeshData;
+use engine::voxels::mesher::MeshData;
 use glow::HasContext;
 
 pub const BLOCK_COLORS: [[f32; 3]; 8] = [
