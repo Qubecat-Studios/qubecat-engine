@@ -90,6 +90,12 @@ impl GlContext {
             return;
         }
         self.window.resize_surface(&self.surface, &self.context);
+
+        // GL рисует в свой viewport, который задаётся один раз при создании
+        // окна и сам не следит за растягиванием поверхности.
+        unsafe {
+            self.gl.viewport(0, 0, width as i32, height as i32);
+        }
     }
 
     /// Начало кадра: очистка буферов цвета/глубины.
