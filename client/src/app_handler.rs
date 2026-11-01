@@ -7,7 +7,7 @@ use engine::{Application, Mat4};
 
 use crate::input_mapper::InputMapper;
 use crate::render::context::GlContext;
-use crate::render::shader::ShaderProgram;
+use crate::render::shader::{FRAGMENT_SHADER, ShaderProgram, VERTEX_SHADER};
 use crate::render::world_renderer::WorldRenderer;
 
 pub struct AppHandler {
@@ -104,32 +104,3 @@ impl ApplicationHandler for AppHandler {
         self.app.engine.resources.input.begin_frame();
     }
 }
-
-pub const VERTEX_SHADER: &str = r#"
-#version 330 core
-layout (location = 0) in vec3 position;
-layout (location = 1) in float block_id;
-
-out float v_block_id;
-
-uniform mat4 u_view_proj;
-
-void main() {
-    v_block_id = block_id;
-    gl_Position = u_view_proj * vec4(position, 1.0);
-}
-"#;
-
-pub const FRAGMENT_SHADER: &str = r#"
-#version 330 core
-in float v_block_id;
-
-out vec4 frag_color;
-
-uniform vec3 u_block_colors[8];
-
-void main() {
-    int id = int(v_block_id + 0.5);
-    frag_color = vec4(u_block_colors[id], 1.0);
-}
-"#;
