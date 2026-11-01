@@ -3,7 +3,7 @@ mod game;
 mod input_mapper;
 mod render;
 
-use engine::{Application, constants::ENGINE_DT};
+use engine::{Application, utils::ENGINE_DT};
 use winit::event_loop::EventLoop;
 
 use crate::app_handler::AppHandler;

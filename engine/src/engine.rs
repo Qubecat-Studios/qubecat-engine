@@ -1,7 +1,7 @@
 use hecs::{CommandBuffer, World};
 
 use crate::{
-    input::Input, math::camera::Camera, resources::Resources, time::Time,
+    input::Input, math::camera::Camera, resources::Resources, utils::Time,
     voxels::voxel_world::VoxelWorld,
 };
 
