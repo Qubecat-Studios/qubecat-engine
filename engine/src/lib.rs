@@ -9,6 +9,7 @@ pub mod transform;
 pub mod aabb;
 pub mod types;
 pub mod utils;
+pub mod object;
 
 
 pub use application::Application;
