@@ -23,8 +23,7 @@ impl Engine {
                     elapsed: 0.0,
                 },
                 input: Input::default(),
-                camera: Camera::default(),
-                voxels: VoxelWorld::default(),
+                camera: Camera::default()
             },
         }
     }

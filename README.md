@@ -1,7 +1,5 @@
-# Qubecat 3D Voxel Engine written in Rust
+# Qubecat 3D Engine written in Rust
 - Currently in early-development.
-> [!NOTE]
-> Currently, ASCII rendering is being used, but only for debugging purposes.
 
 ## Quick Start
 > [!NOTE]

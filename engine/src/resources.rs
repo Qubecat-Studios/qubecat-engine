@@ -4,6 +4,5 @@ use crate::{camera::Camera, input::Input, time::Time, voxels::voxel_world::Voxel
 pub struct Resources {
     pub time: Time,
     pub input: Input,
-    pub camera: Camera,
-    pub voxels: VoxelWorld,
+    pub camera: Camera
 }
