@@ -1,7 +1,7 @@
 use hecs::{CommandBuffer, World};
 
 use crate::{
-    camera::Camera, input::Input, resources::Resources, time::Time, voxels::voxel_world::VoxelWorld,
+    camera::Camera, input::Input, resources::Resources, time::Time,
 };
 
 /// Состояние движка: мир, ресурсы и буфер команд.

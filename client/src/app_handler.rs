@@ -8,14 +8,13 @@ use engine::{Application, Mat4};
 use crate::input_mapper::InputMapper;
 use crate::render::context::GlContext;
 use crate::render::shader::{FRAGMENT_SHADER, ShaderProgram, VERTEX_SHADER};
-use crate::render::world_renderer::WorldRenderer;
 
 pub struct AppHandler {
     app: Application,
     mapper: InputMapper,
     ctx: Option<GlContext>,
     program: Option<ShaderProgram>,
-    renderer: WorldRenderer,
+//    renderer: WorldRenderer,
 }
 
 impl AppHandler {
@@ -25,7 +24,7 @@ impl AppHandler {
             mapper: InputMapper::new(),
             ctx: None,
             program: None,
-            renderer: WorldRenderer::new(),
+//            renderer: WorldRenderer::new(),
         }
     }
 }
@@ -63,7 +62,7 @@ impl ApplicationHandler for AppHandler {
 
                 ctx.clear();
                 if let Some(program) = &self.program {
-                    self.renderer.render(&ctx.gl, program, &view_proj);
+//                    self.renderer.render(&ctx.gl, program, &view_proj);
                 }
                 ctx.present();
             }
@@ -92,10 +91,10 @@ impl ApplicationHandler for AppHandler {
         self.app.step();
 
         // Синхронизация мешей с GPU после тиков, до рендера кадра.
-        if let (Some(ctx), Some(_)) = (&mut self.ctx, &self.program) {
-            let voxels = &mut self.app.engine.resources.voxels;
-            self.renderer.sync(&ctx.gl, voxels);
-        }
+//        if let (Some(ctx), Some(_)) = (&mut self.ctx, &self.program) {
+//            let voxels = &mut self.app.engine.resources.voxels;
+//            self.renderer.sync(&ctx.gl, voxels);
+//        }
 
         if let Some(ctx) = &self.ctx {
             ctx.window().request_redraw();

@@ -2,21 +2,7 @@ use engine::{CommandBuffer, Vec3, World, input::Key, resources::Resources};
 
 /// Плоский мир: 2 чанка по X, два слоя камня. Генерируется один раз.
 pub fn world_gen(_world: &mut World, res: &mut Resources, _cmd: &mut CommandBuffer) {
-    if res.time.tick != 0 {
-        return;
-    }
-
-    for cx in 0..2 {
-        for cz in 0..2 {
-            for y in 0..2 {
-                for z in 0..16 {
-                    for x in 0..16 {
-                        res.voxels.set_block(cx * 16 + x, y, cz * 16 + z, 1);
-                    }
-                }
-            }
-        }
-    }
+    todo!()
 }
 
 /// Полёт по WASD + Space/Shift, поворот Q/E. Мышь — в Ф3.
