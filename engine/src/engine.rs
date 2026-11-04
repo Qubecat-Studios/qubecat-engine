@@ -24,7 +24,7 @@ impl Engine {
                 },
                 input: Input::default(),
                 camera: Camera::default(),
-                mesh: Mesh::default()
+                mesh: Mesh
             },
         }
     }
