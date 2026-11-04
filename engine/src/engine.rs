@@ -1,7 +1,9 @@
+use std::collections::HashMap;
+
 use hecs::{CommandBuffer, World};
 
 use crate::{
-    camera::Camera, input::Input, mesh::Mesh, resources::Resources, time::Time,
+    camera::Camera, input::Input, mesh::{Mesh, MeshHandle}, resources::Resources, time::Time,
 };
 
 /// Состояние движка: мир, ресурсы и буфер команд.
@@ -24,7 +26,7 @@ impl Engine {
                 },
                 input: Input::default(),
                 camera: Camera::default(),
-                mesh: Mesh
+                assets: todo!()
             },
         }
     }
