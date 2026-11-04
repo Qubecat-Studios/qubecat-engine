@@ -4,6 +4,7 @@ pub mod engine;
 pub mod input;
 pub mod resources;
 pub mod time;
+pub mod mesh;
 pub mod types;
 pub mod utils;
 

@@ -1,7 +1,7 @@
 use hecs::{CommandBuffer, World};
 
 use crate::{
-    camera::Camera, input::Input, resources::Resources, time::Time,
+    camera::Camera, input::Input, mesh::Mesh, resources::Resources, time::Time,
 };
 
 /// Состояние движка: мир, ресурсы и буфер команд.
@@ -23,7 +23,8 @@ impl Engine {
                     elapsed: 0.0,
                 },
                 input: Input::default(),
-                camera: Camera::default()
+                camera: Camera::default(),
+                mesh: Mesh::default()
             },
         }
     }
